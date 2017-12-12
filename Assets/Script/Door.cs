@@ -3,24 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour {
-   
-     public Animation open;
-    public Animation close;
 
-     // Use this for initialization
-     
-       
+    public Transform openPosition;
+    public float speed = 1f;
+    public bool secretRoom;
+    Vector3 destinyPos;
+    Vector3 originPos;
 
-     void OnTriggerEnter(Collider player)
+    void Start ()
+    {
+        originPos = transform.position;
+    }
+
+    IEnumerator OpenCloseDoor()
+    {
+        GetComponent<AudioSource>().Play();
+        while (Vector3.Distance(transform.position, destinyPos) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, destinyPos, speed/100);
+            yield return null;
+        }
+    }
+
+    void OnTriggerEnter(Collider player)
      {
-        open.GetClip("OpeningDoor");
-         open.Play();
+
+        if (GameController.controller.gameState == GameStates.secretRoomOpen)
+        {
+            secretRoom = false;
+
+        }
+
+        if (!secretRoom  && player.tag == "Player")
+        {
+            destinyPos = openPosition.position;
+            StartCoroutine("OpenCloseDoor");
+        }
      }
 
      void OnTriggerExit(Collider player)
      {
-        open.GetClip("ClosingDoor");
-        close.Play(); 
-     }
+        if (!secretRoom && player.tag == "Player")
+        {
+            destinyPos = originPos;
+            StartCoroutine("OpenCloseDoor");
+        }
+    }
+
 }
 

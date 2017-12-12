@@ -20,6 +20,12 @@ public class SceneController : MonoBehaviour {
         SceneManager.LoadScene("Level1");
     }
 
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+
     public void Exit()
     {
         Application.Quit();
@@ -27,7 +33,10 @@ public class SceneController : MonoBehaviour {
 
     void OnTriggerEnter(Collider player)
     {
-        SceneManager.LoadScene("Victory");
+        //if (player.tag == "Player")
+        //{
+            SceneManager.LoadScene("Victory");
+        //}
 
     }
 }

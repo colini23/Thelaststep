@@ -11,6 +11,7 @@ public class Video : MonoBehaviour {
 
     public VideoClip videoToPlay;
 
+    public string nextScene = "";
     private VideoPlayer videoPlayer;
     private VideoSource videoSource;
 
@@ -56,6 +57,9 @@ public class Video : MonoBehaviour {
         //Set video To Play then prepare Audio to prevent Buffering
         videoPlayer.clip = videoToPlay;
         videoPlayer.Prepare();
+        
+        //Black image
+        image.enabled = false;
 
         //Wait until video is prepared
         WaitForSeconds waitTime = new WaitForSeconds(1);
@@ -72,6 +76,8 @@ public class Video : MonoBehaviour {
 
         //Assign the Texture from Video to RawImage to be displayed
         image.texture = videoPlayer.texture;
+        image.enabled = true;
+
 
         //Play Video
         videoPlayer.Play();
@@ -86,7 +92,8 @@ public class Video : MonoBehaviour {
             yield return null;
         }
 
-        Application.LoadLevel("MainMenu");
+        if (nextScene != "")
+               Application.LoadLevel(nextScene);
         Debug.Log("Done Playing Video");
     }
 }

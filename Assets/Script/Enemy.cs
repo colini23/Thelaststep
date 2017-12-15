@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour {
             {
                    if (hit.collider.tag == "Player")
                 {
-                    FindObjectOfType<SceneController>().GameOver();
+                    FindObjectOfType<SceneManager>().GameOver();
                 }
             }
         }
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour {
             {
                 if (hit.collider.tag == "Player")
                 {
-                    FindObjectOfType<SceneController>().GameOver();
+                    FindObjectOfType<SceneManager>().GameOver();
                 }
             }
         }

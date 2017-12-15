@@ -16,7 +16,7 @@ MonoBehaviour:
     m_Settings:
       mode: 0
       depth:
-        scale: 1
+        scale: 0.108
       motionVectors:
         sourceOpacity: 1
         motionImageOpacity: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       intensity: 1
-      radius: 0.3
+      radius: 0.14
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -109,19 +109,19 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.02
-        neutralWhiteIn: 10
-        neutralBlackOut: 0
-        neutralWhiteOut: 10
-        neutralWhiteLevel: 5.3
+        neutralBlackIn: 0.0389
+        neutralWhiteIn: 9.25
+        neutralBlackOut: -0.003
+        neutralWhiteOut: 8.87
+        neutralWhiteLevel: 16.41
         neutralWhiteClip: 10
       basic:
-        postExposure: 0
-        temperature: 0
+        postExposure: -0.24
+        temperature: -1.6
         tint: 0
         hueShift: 0
         saturation: 1
@@ -134,9 +134,9 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 1, b: 1, a: 0}
-          power: {r: 1, g: 1, b: 1, a: 0}
-          offset: {r: 1, g: 1, b: 1, a: 0}
+          slope: {r: 1, g: 1, b: 1, a: 0.18025751}
+          power: {r: 1, g: 1, b: 1, a: -0.23175965}
+          offset: {r: 1, g: 1, b: 1, a: 0.08583691}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}
@@ -298,7 +298,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.144
+      intensity: 0
       smoothness: 0.2
       roundness: 1
       mask: {fileID: 0}

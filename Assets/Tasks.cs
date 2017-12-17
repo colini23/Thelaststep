@@ -4,7 +4,7 @@
 - Pause options?
 - Gota?
 - Lluvia?
-                                                                                                     
+                                                                                                       
 - Definir y escribir mecánicas en wiki: puzzle polaroid + robots vigilancia policia zona restringida, 2 avisos. 
 - Buscar Skybox ciudad nocturna
 

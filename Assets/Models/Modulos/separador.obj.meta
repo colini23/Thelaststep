@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: bec00701c777de54ab334da5d2afa2c8
-timeCreated: 1513203133
+guid: b583fa4ece9bab141a9c7d545d8ef423
+timeCreated: 1515874852
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: polySurface9_modulo_izquierda_pCube19
+    100000: pared2_high6
     100002: //RootNode
-    400000: polySurface9_modulo_izquierda_pCube19
+    400000: pared2_high6
     400002: //RootNode
-    2300000: polySurface9_modulo_izquierda_pCube19
-    3300000: polySurface9_modulo_izquierda_pCube19
-    4300000: polySurface9_modulo_izquierda_pCube19
+    2300000: pared2_high6
+    3300000: pared2_high6
+    4300000: pared2_high6
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: initialShadingGroup
-    second: {fileID: 2100000, guid: 6dd53b4ec2862244dab991d4c9765d5a, type: 2}
+      name: pared2_high6Mat
+    second: {fileID: 2100000, guid: 6ecdc940bf4a1c74185d1f02cffce6f7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

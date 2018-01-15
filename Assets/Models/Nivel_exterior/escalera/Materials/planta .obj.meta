@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: ac32321dad7be2b49a7ff61c94ca5141
+timeCreated: 1514906450
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: pCube230
+    100002: pCube231
+    100004: pCube232
+    100006: pCube233
+    100008: pCube234
+    100010: pCube236
+    100012: pCube237
+    100014: pCube238
+    100016: pCube240
+    100018: //RootNode
+    400000: pCube230
+    400002: pCube231
+    400004: pCube232
+    400006: pCube233
+    400008: pCube234
+    400010: pCube236
+    400012: pCube237
+    400014: pCube238
+    400016: pCube240
+    400018: //RootNode
+    2300000: pCube230
+    2300002: pCube231
+    2300004: pCube232
+    2300006: pCube233
+    2300008: pCube234
+    2300010: pCube236
+    2300012: pCube237
+    2300014: pCube238
+    2300016: pCube240
+    3300000: pCube230
+    3300002: pCube231
+    3300004: pCube232
+    3300006: pCube233
+    3300008: pCube234
+    3300010: pCube236
+    3300012: pCube237
+    3300014: pCube238
+    3300016: pCube240
+    4300000: pCube230
+    4300002: pCube231
+    4300004: pCube232
+    4300006: pCube233
+    4300008: pCube234
+    4300010: pCube236
+    4300012: pCube237
+    4300014: pCube238
+    4300016: pCube240
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube230Mat
+    second: {fileID: 2100000, guid: 4151b68c4b4d21a48a5ab6bd631786a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube231Mat
+    second: {fileID: 2100000, guid: 19a9dea798185af45aea6a6e899ef648, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube232Mat
+    second: {fileID: 2100000, guid: b06f656c53f8ef042af2f6aabbebca6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube233Mat
+    second: {fileID: 2100000, guid: 14ba51d68e4494840b21ee477cfd59a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube234Mat
+    second: {fileID: 2100000, guid: f4ede025cc8dc4649bfdde21c91d6f34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube236Mat
+    second: {fileID: 2100000, guid: 837c728bd9e967b41a5684629a4acd12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube237Mat
+    second: {fileID: 2100000, guid: 19768619ecfdcc040a28cb45ab9c85d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube238Mat
+    second: {fileID: 2100000, guid: 2ef8ab2333c2c2948aaae90cb46091f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube240Mat
+    second: {fileID: 2100000, guid: d06ed9540dc09ed4bad1a888a4b8e4a7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

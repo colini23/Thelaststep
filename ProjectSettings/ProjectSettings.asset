@@ -607,12 +607,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 1d0cf7b1-b692-48ba-bf1b-4514215481cc
+  cloudProjectId: 2070f4f7-0e02-4c43-a040-cb49d2552097
   projectName: TheLastStep
-  organizationId: victorlizaldre2016
+  organizationId: victorlizal23-gmail-com
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

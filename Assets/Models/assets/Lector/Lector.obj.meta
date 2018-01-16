@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8fc9cfbc177a58242be388cab337ac57
-timeCreated: 1516089146
+guid: 01b5b056d70b4aa498321ecaa29e7262
+timeCreated: 1511890628
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -11,20 +11,28 @@ ModelImporter:
     400000: Lector
     400002: //RootNode
     400004: textureEditorIsolateSelectSet_Lector
-    2100000: LectorMat
-    2100002: textureEditorIsolateSelectSet_LectorMat
     2300000: Lector
     2300002: textureEditorIsolateSelectSet_Lector
     3300000: Lector
     3300002: textureEditorIsolateSelectSet_Lector
     4300000: Lector
     4300002: textureEditorIsolateSelectSet_Lector
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LectorMat
+    second: {fileID: 2100000, guid: 90e9ebe5fa3acc849a2ff9459b5e0bbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_LectorMat
+    second: {fileID: 2100000, guid: 1a8eb392647ad554ca47b0bc649f28e7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -62,8 +70,6 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

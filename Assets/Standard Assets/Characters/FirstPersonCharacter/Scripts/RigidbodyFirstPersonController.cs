@@ -15,17 +15,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
-
 	        public KeyCode RunKey = KeyCode.LeftShift;
-
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
 #if !MOBILE_INPUT
             private bool m_Running;
-			static bool down = false;
 #endif
+
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
 	            if (input == Vector2.zero) return;
@@ -55,7 +53,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	            {
 		            m_Running = false;
 	            }
-			
 #endif
             }
 
@@ -91,8 +88,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-
-		bool down;
 
 
         public Vector3 Velocity
@@ -139,18 +134,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
-
-			if (!down && Input.GetKeyDown(KeyCode.LeftControl)){
-				down=true;
-				transform.position -= Vector3.up * transform.localScale.y/2f;
-				transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y/2f, transform.localScale.z);
-			}
-			if (down && Input.GetKeyUp(KeyCode.LeftControl)){
-				down=false;
-				transform.position += Vector3.up * transform.localScale.y/2f;
-
-				transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y*2f, transform.localScale.z);
-			}
         }
 
 

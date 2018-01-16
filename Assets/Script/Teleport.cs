@@ -7,7 +7,7 @@ using System.Collections;
 
 public class Teleport : MonoBehaviour
 {
-	public bool spiderMman;
+
 	private RaycastHit lastRaycastHit;
 
 	public GameObject teleportMarker;
@@ -24,9 +24,7 @@ public class Teleport : MonoBehaviour
 	void Start () {
 
 		teleportMarker.gameObject.SetActive (false);
-		if (!spiderMman) {
-			Physics.gravity = Vector3.up * -10f;
-		}
+
 	}
 
 	void Update()
@@ -37,11 +35,13 @@ public class Teleport : MonoBehaviour
 		if (Input.GetMouseButtonUp(0)){
 			if (GetLookedAtObject () != null)
 				StartCoroutine (TeleportToLookAt ());
+
 			teleportMarker.SetActive (false);
 		}
 
 		if (Input.GetMouseButtonDown (0)) {
 			teleportMarker.SetActive (true);
+		
 		}
 
 		//Mientras elegimos donde mostramos el sistema de partículas
@@ -63,7 +63,7 @@ public class Teleport : MonoBehaviour
 
 		Vector3 direction = Camera.main.transform.forward;
 
-		if (Physics.Raycast(origin, direction, out lastRaycastHit, range) && (lastRaycastHit.normal.normalized.Equals(Vector3.up)|| spiderMman)) //Si es tipo suelo el objeto
+		if (Physics.Raycast(origin, direction, out lastRaycastHit, range)) //Si es tipo suelo el objeto
 
 		{
 

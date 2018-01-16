@@ -1,15 +1,5 @@
 ﻿/*   TAREAS PENDIENTES *
 
-
-- Orden y limpieza
-- Collab
-- Agacharse. 
-- Salto
-- Analizer
-
-
-
-
 - Crear/Importar 5 systemas de partículas. 
 - Pause options?
 - Gota?

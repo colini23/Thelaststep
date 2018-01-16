@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b68a62a3243d8234a8c07bc9a4e95215
-timeCreated: 1513116507
+guid: 9dae99514cfb6214bb4e9b3c86a37373
+timeCreated: 1516089180
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,20 +9,16 @@ ModelImporter:
     100002: pCube2
     400000: //RootNode
     400002: pCube2
+    2100000: pCube2Mat
     2300000: pCube2
     3300000: pCube2
     4300000: pCube2
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pCube2Mat
-    second: {fileID: 2100000, guid: 192920710d6aa704182a0d07d0336310, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -60,6 +56,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

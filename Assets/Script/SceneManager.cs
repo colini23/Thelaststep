@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
     public bool cursorVisible = true;
+	public string nextScene = "Victory";
+
 	// Use this for initialization
 	void Start () {
         Cursor.visible = cursorVisible;
@@ -33,6 +35,11 @@ public class SceneManager : MonoBehaviour {
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 
+	public void YouWin()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Victory");
+	}
+
     public void Exit()
     {
         Application.Quit();
@@ -42,7 +49,7 @@ public class SceneManager : MonoBehaviour {
     {
         if (player.tag == "Player" || player.tag == "Untagged")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Victory");
+			UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
         }
 
     }

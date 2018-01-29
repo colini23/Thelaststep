@@ -171,7 +171,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_RigidBody.velocity.sqrMagnitude <
                     (movementSettings.CurrentTargetSpeed*movementSettings.CurrentTargetSpeed))
                 {
-                    m_RigidBody.AddForce(desiredMove*SlopeMultiplier(), ForceMode.Impulse);
+					if (!Input.GetButton("Fire1")) {
+						m_RigidBody.AddForce (desiredMove * SlopeMultiplier (), ForceMode.Impulse);
+					}
                 }
             }
 
@@ -270,7 +272,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_IsGrounded = true;
+                m_IsGrounded = false;
                 m_GroundContactNormal = Vector3.up;
             }
             if (!m_PreviouslyGrounded && m_IsGrounded && m_Jumping)

@@ -29,23 +29,23 @@ public class Teleport : MonoBehaviour
 		}
 	}
 
-	void Update()
+	void LateUpdate()
 
 	{
 
 		//Confirmamos teleportación
-		if (Input.GetMouseButtonUp(0)){
+		if (Input.GetButtonUp("Fire2")){
 			if (GetLookedAtObject () != null)
 				StartCoroutine (TeleportToLookAt ());
 			teleportMarker.SetActive (false);
 		}
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetButtonDown("Fire2")) {
 			teleportMarker.SetActive (true);
 		}
 
 		//Mientras elegimos donde mostramos el sistema de partículas
-		if (Input.GetMouseButton(0)) {
+		if (Input.GetButton("Fire2")) {
 			GameObject currentTarget = GetLookedAtObject ();
 			if (currentTarget != null && currentTarget.tag == "Suelo")
 				teleportMarker.transform.position = lastRaycastHit.point + Vector3.up*0.01f;

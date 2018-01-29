@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour {
     public Image card2Image;
     public Text fKey;
     public Text pauseText;
+	public RMF_RadialMenu radialMenu;
+	public Teleport teleport;
+	public Zoom zoom;
 
     public GameObject player;
 
@@ -24,7 +27,7 @@ public class GameController : MonoBehaviour {
 
     public static GameController controller;
 
-    bool paused;
+    public bool paused;
 
     void Awake()
     {
@@ -34,10 +37,21 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         gameState = GameStates.init;
+		Physics.gravity = new Vector3 (0,-10, 0);
+
      }
 	
 	// Update is called once per frame
 	void Update () {
+
+		foreach(KeyCode vKey in System.Enum.GetValues(typeof(KeyCode))){
+			if(Input.GetKey(vKey)){
+				print (vKey);
+
+			}
+		}
+
+		//Pause
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             paused = !paused;
@@ -46,13 +60,29 @@ public class GameController : MonoBehaviour {
 
             pauseText.enabled = paused;
         }
-            if (Input.GetKeyDown(KeyCode.F10))
+
+		//God MOde
+         if (Input.GetKeyDown(KeyCode.F10))
         {
             player.GetComponent<Collider>().isTrigger = true;
             Physics.gravity = Vector3.zero;
             player.tag = "Untagged";
         }
 
+		zoom.enabled = false;
+		teleport.enabled = false;
+		//Habilidad seleccionada: ZOOM
+		if (radialMenu.index == 1) {
+			zoom.enabled = true;
+		}
+
+		//Habilidad: Teleport
+		if (radialMenu.index == 2) {
+			teleport.enabled = true;
+		}
+
+
+		//Game States
 		if (gameState == GameStates.card1)
         {
             card1Image.enabled = true;

@@ -59,7 +59,7 @@ public class Teleport : MonoBehaviour
 
 	{
 
-		Vector3 origin = transform.position;
+		Vector3 origin = Camera.main.transform.position;
 
 		Vector3 direction = Camera.main.transform.forward;
 

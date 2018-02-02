@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 78e967addc8af4b47bcfa378b7ac3f56
+timeCreated: 1517302383
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Group001
+    100004: Line003
+    100006: Magis_XZ3_200_mat1
+    100008: Object001
+    100010: pCube013
+    100012: pCube014
+    100014: pCube015
+    100016: pCube016
+    100018: pCube017
+    100020: pCube10
+    100022: pCube11
+    100024: pCube12
+    100026: pCube7
+    100028: pCube8
+    100030: pCube9
+    100032: pCylinder5
+    100034: pPlane006
+    100036: pPlane4
+    100038: pPlane5
+    400000: //RootNode
+    400002: Group001
+    400004: Line003
+    400006: Magis_XZ3_200_mat1
+    400008: Object001
+    400010: pCube013
+    400012: pCube014
+    400014: pCube015
+    400016: pCube016
+    400018: pCube017
+    400020: pCube10
+    400022: pCube11
+    400024: pCube12
+    400026: pCube7
+    400028: pCube8
+    400030: pCube9
+    400032: pCylinder5
+    400034: pPlane006
+    400036: pPlane4
+    400038: pPlane5
+    2300000: Line003
+    2300002: Magis_XZ3_200_mat1
+    2300004: Object001
+    2300006: pCube013
+    2300008: pCube014
+    2300010: pCube015
+    2300012: pCube016
+    2300014: pCube017
+    2300016: pCube10
+    2300018: pCube11
+    2300020: pCube12
+    2300022: pCube7
+    2300024: pCube8
+    2300026: pCube9
+    2300028: pCylinder5
+    2300030: pPlane006
+    2300032: pPlane4
+    2300034: pPlane5
+    3300000: Line003
+    3300002: Magis_XZ3_200_mat1
+    3300004: Object001
+    3300006: pCube013
+    3300008: pCube014
+    3300010: pCube015
+    3300012: pCube016
+    3300014: pCube017
+    3300016: pCube10
+    3300018: pCube11
+    3300020: pCube12
+    3300022: pCube7
+    3300024: pCube8
+    3300026: pCube9
+    3300028: pCylinder5
+    3300030: pPlane006
+    3300032: pPlane4
+    3300034: pPlane5
+    4300000: Line003
+    4300002: pCube12
+    4300004: pCube11
+    4300006: pPlane5
+    4300008: pCylinder5
+    4300010: pCube10
+    4300012: pCube8
+    4300014: pCube7
+    4300016: pCube9
+    4300018: pPlane4
+    4300020: Magis_XZ3_200_mat1
+    4300022: Object001
+    4300024: pCube013
+    4300026: pCube014
+    4300028: pCube015
+    4300030: pCube016
+    4300032: pCube017
+    4300034: pPlane006
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magis_XZ3_200_mat(1)_Magis_XZ3_200_mat1_mtl_1
+    second: {fileID: 2100000, guid: b99e2a920eae22549ac79a2d246ae69d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magis_XZ3_200_mat(1)_Magis_XZ3_200_mat1_mtl_2
+    second: {fileID: 2100000, guid: fe09196acc1889146b37cbec7cb00289, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magis_XZ3_200_mat(1)_Magis_XZ3_200_mat1_mtl_3
+    second: {fileID: 2100000, guid: af3d7616aac29444680570404affafa3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 51737b261ebbe1646a442282a0139747, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: habitacion_joel_initialShadingGroup
+    second: {fileID: 2100000, guid: 19bb6d53a430e7941b5e8f00b888b227, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

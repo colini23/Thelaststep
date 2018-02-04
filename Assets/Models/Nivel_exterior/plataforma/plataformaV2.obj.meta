@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 1c2f40f4ad4bb924d8ee4929851ad202
-timeCreated: 1517496611
+guid: 724ba79be076e6d419ba99c8141be19b
+timeCreated: 1517671313
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: polySurface1_group1
-    400000: //RootNode
-    400002: polySurface1_group1
-    2100000: BITA_blinn2SG
-    2300000: polySurface1_group1
-    3300000: polySurface1_group1
-    4300000: polySurface1_group1
+    100000: base:polySurface42
+    100002: //RootNode
+    400000: base:polySurface42
+    400002: //RootNode
+    2100000: base_polySurface42Mat
+    2300000: base:polySurface42
+    3300000: base:polySurface42
+    4300000: base:polySurface42
   externalObjects: {}
   materials:
     importMaterials: 1

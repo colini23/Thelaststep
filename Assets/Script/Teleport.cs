@@ -8,6 +8,7 @@ using System.Collections;
 public class Teleport : MonoBehaviour
 {
 	public bool spiderMman;
+	public Animator coldDown;
 	private RaycastHit lastRaycastHit;
 
 	public GameObject teleportMarker;
@@ -30,13 +31,14 @@ public class Teleport : MonoBehaviour
 	}
 
 	void LateUpdate()
-
 	{
 
 		//Confirmamos teleportación
 		if (Input.GetButtonUp("Fire2")){
-			if (GetLookedAtObject () != null)
+			if (GetLookedAtObject () != null) {
 				StartCoroutine (TeleportToLookAt ());
+				coldDown.SetTrigger ("Start");
+			}
 			teleportMarker.SetActive (false);
 		}
 

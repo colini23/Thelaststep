@@ -140,7 +140,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jump = true;
             }
 
-			if (!down && Input.GetKeyDown(KeyCode.LeftControl)){
+			if (!down && Input.GetKeyDown(KeyCode.C)){
 				down=true;
 				transform.position -= Vector3.up * transform.localScale.y/2f;
 				transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y/2f, transform.localScale.z);
@@ -233,6 +233,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             Vector2 input = new Vector2
                 {
+					
                     x = CrossPlatformInputManager.GetAxis("Horizontal"),
                     y = CrossPlatformInputManager.GetAxis("Vertical")
                 };

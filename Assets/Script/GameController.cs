@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
     public Image card1Image;
     public Image card2Image;
     public Text fKey;
-    public Text pauseText;
+	public GameObject pauseText;
 	public RMF_RadialMenu radialMenu;
 	public Teleport teleport;
 	public Zoom zoom;
@@ -54,11 +54,7 @@ public class GameController : MonoBehaviour {
 		//Pause
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            paused = !paused;
-
-            Time.timeScale = paused ? 0 : 1;
-
-            pauseText.enabled = paused;
+			SwitchPause ();
         }
 
 		//God MOde
@@ -96,4 +92,20 @@ public class GameController : MonoBehaviour {
             gameState = GameStates.secretRoomOpen;
         }
     }
+
+	public void SwitchPause (){
+		paused = !paused;
+
+		Time.timeScale = paused ? 0 : 1;
+
+		pauseText.SetActive (paused);
+		Cursor.visible = paused;
+
+		if (paused) {
+			Cursor.lockState = CursorLockMode.None;
+		} else {
+			Cursor.lockState = CursorLockMode.Locked;
+		}
+
+	}
 }

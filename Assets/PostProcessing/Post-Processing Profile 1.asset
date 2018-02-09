@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       intensity: 4
-      radius: 0.78
+      radius: 0.3
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -85,25 +85,25 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 1
     m_Settings:
-      lowPercent: 45
-      highPercent: 95
-      minLuminance: -5
-      maxLuminance: 1
+      lowPercent: 49.000053
+      highPercent: 99
+      minLuminance: -3.27
+      maxLuminance: -4.32
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -8
-      logMax: 4
+      logMin: -4
+      logMax: 2
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 96.91
-        threshold: 1.29
-        softKnee: 0.14
-        radius: 4.45
+        intensity: 5
+        threshold: 3.33
+        softKnee: 1
+        radius: 1
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 0}
@@ -113,21 +113,21 @@ MonoBehaviour:
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.0389
-        neutralWhiteIn: 9.25
-        neutralBlackOut: -0.003
-        neutralWhiteOut: 8.87
+        neutralBlackIn: 0.0694
+        neutralWhiteIn: 8.29
+        neutralBlackOut: -0.0008
+        neutralWhiteOut: 8.94
         neutralWhiteLevel: 16.41
         neutralWhiteClip: 10
       basic:
         postExposure: -0.24
-        temperature: -1.6
+        temperature: -0
         tint: 0
         hueShift: 0
         saturation: 1
-        contrast: 1
+        contrast: 1.125
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
+        red: {x: 0.94, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 2800000, guid: ea5873cfd9158664f89459f0c9e1d853, type: 3}
-      intensity: 0.615
+      intensity: 0.51
   grain:
     m_Enabled: 0
     m_Settings:

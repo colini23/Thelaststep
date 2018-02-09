@@ -1,5 +1,6 @@
 ﻿	
 using UnityEngine;
+using UnityEngine.UI;
 
 using System.Collections;
 
@@ -8,7 +9,7 @@ using System.Collections;
 public class Teleport : MonoBehaviour
 {
 	public bool spiderMman;
-	public Animator coldDown;
+	public Image coldDownImage;
 	private RaycastHit lastRaycastHit;
 
 	public GameObject teleportMarker;
@@ -16,6 +17,8 @@ public class Teleport : MonoBehaviour
 	public AudioClip audioClip;
 
 	public float range = 1000;
+
+	public float speedColdDown = 1;
 
 	[Range(1f,100f)]
 	public float spedMove = 50f;
@@ -34,24 +37,26 @@ public class Teleport : MonoBehaviour
 	{
 
 		//Confirmamos teleportación
-		if (Input.GetButtonUp("Fire2")){
+		if (Input.GetButtonUp("Fire2") && coldDownImage.fillAmount == 1){
 			if (GetLookedAtObject () != null) {
 				StartCoroutine (TeleportToLookAt ());
-				coldDown.SetTrigger ("Start");
+				coldDownImage.fillAmount = 0;
 			}
 			teleportMarker.SetActive (false);
 		}
 
-		if (Input.GetButtonDown("Fire2")) {
+		if (Input.GetButtonDown("Fire2") && coldDownImage.fillAmount == 1) {
 			teleportMarker.SetActive (true);
 		}
 
 		//Mientras elegimos donde mostramos el sistema de partículas
-		if (Input.GetButton("Fire2")) {
+		if (Input.GetButton("Fire2") && coldDownImage.fillAmount == 1) {
 			GameObject currentTarget = GetLookedAtObject ();
 			if (currentTarget != null && currentTarget.tag == "Suelo")
 				teleportMarker.transform.position = lastRaycastHit.point + Vector3.up*0.01f;
 		}
+
+		coldDownImage.fillAmount = Mathf.MoveTowards (coldDownImage.fillAmount, 1, Time.deltaTime*(1/speedColdDown));
 
 	}
 

@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264033580142954}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.06, y: 6.54, z: 135.13}
+  m_LocalPosition: {x: 129.06, y: 21.79, z: 114.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4200472092756334}
@@ -342,11 +342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63743e4f95d90bf48885329e41cfdb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderMman: 1
+  spiderMman: 0
+  coldDownImage: {fileID: 0}
   teleportMarker: {fileID: 1857996411433646}
   audioClip: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   range: 50
-  spedMove: 53.5
+  speedColdDown: 5
+  spedMove: 71.7
 --- !u!114 &114724668932584554
 MonoBehaviour:
   m_ObjectHideFlags: 1

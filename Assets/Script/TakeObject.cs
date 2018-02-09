@@ -19,7 +19,7 @@ public class TakeObject : MonoBehaviour
     {
         if (toTake)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+			if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown("joystick button 2"))
             {
                 Destroy(gameObject);
                 GameController.controller.fKey.enabled = false;

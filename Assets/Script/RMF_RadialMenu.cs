@@ -103,13 +103,9 @@ public class RMF_RadialMenu : MonoBehaviour {
 
 		panleContainer.SetActive(Input.GetButton("Fire1"));
 
-		if (Input.GetButtonUp("Fire1") && !GameController.controller.paused) {
-			Time.timeScale = 1f;		
-		}
 			
 		if (Input.GetButton("Fire1") && !GameController.controller.paused) {
 
-			Time.timeScale = 0.5f;
 
 			//If your gamepad uses different horizontal and vertical joystick inputs, change them here!
 			//==============================================================================================
@@ -162,6 +158,8 @@ public class RMF_RadialMenu : MonoBehaviour {
 
 			} 
 		}
+
+	
 	}
 
 

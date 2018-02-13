@@ -46,7 +46,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					CurrentTargetSpeed = ForwardSpeed;
 				}
 #if !MOBILE_INPUT
-	            if (Input.GetKey(RunKey))
+				if (Input.GetKey(RunKey) || Input.GetKey("joystick button 8"))
 	            {
 		            CurrentTargetSpeed *= RunMultiplier;
 		            m_Running = true;
@@ -135,7 +135,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
 
-            if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
+			if ((CrossPlatformInputManager.GetButtonDown("Jump") || Input.GetKey("joystick button 0")) && !m_Jump)
             {
                 m_Jump = true;
             }

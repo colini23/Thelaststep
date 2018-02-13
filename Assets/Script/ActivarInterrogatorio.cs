@@ -7,6 +7,7 @@ public class ActivarInterrogatorio : MonoBehaviour {
 	public GameObject interrogatorioObject;
 	public GameObject player;
 	public GameObject focusButton;
+
 	void OnTriggerEnter(Collider coll)
 	{
 		if (coll.tag == "Player") {

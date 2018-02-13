@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 
     public Image card1Image;
     public Image card2Image;
+
     public Text fKey;
 	public GameObject pauseText;
 	public RMF_RadialMenu radialMenu;
@@ -22,6 +23,8 @@ public class GameController : MonoBehaviour {
 	public Zoom zoom;
 
     public GameObject player;
+
+	public GameObject focusButton;
 
     public GameStates gameState;
 
@@ -52,7 +55,7 @@ public class GameController : MonoBehaviour {
 		}
 
 		//Pause
-        if (Input.GetKeyUp(KeyCode.Escape))
+		if (Input.GetKeyUp(KeyCode.Escape)|| Input.GetKeyDown("joystick button 7"))
         {
 			SwitchPause ();
         }
@@ -103,6 +106,8 @@ public class GameController : MonoBehaviour {
 
 		if (paused) {
 			Cursor.lockState = CursorLockMode.None;
+			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (focusButton);
+
 		} else {
 			Cursor.lockState = CursorLockMode.Locked;
 		}

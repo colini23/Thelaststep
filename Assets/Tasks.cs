@@ -1,11 +1,13 @@
 ﻿/*   TAREAS PENDIENTES *
 
 
-- Orden y limpieza
-- Collab
-- Agacharse. 
-- Salto
-- Analizer
+- main icon
+- Lenguages! <- Dialogos finales y (haard work: create images)
+- Click sound button. Testear
+-musica en scena vicotira y derrota.
+- valvula
+- luces coche, iluminación en general.
+- Preguntas condicionadas.
 
 
 

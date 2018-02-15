@@ -55,8 +55,8 @@ MonoBehaviour:
       reflection:
         blendType: 0
         reflectionQuality: 2
-        maxDistance: 100
-        iterationCount: 256
+        maxDistance: 113
+        iterationCount: 108
         stepSize: 3
         widthModifier: 0.5
         reflectionBlur: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.3
+        intensity: 0.97
         threshold: 1.19
         softKnee: 0.5
         radius: 2.48
@@ -112,20 +112,20 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       tonemapping:
-        tonemapper: 2
-        neutralBlackIn: 0.02
-        neutralWhiteIn: 10
+        tonemapper: 1
+        neutralBlackIn: 0.1
+        neutralWhiteIn: 10.09
         neutralBlackOut: 0
         neutralWhiteOut: 10
-        neutralWhiteLevel: 5.3
+        neutralWhiteLevel: 9.18
         neutralWhiteClip: 10
       basic:
-        postExposure: 0
+        postExposure: -0.16
         temperature: 0
         tint: 0
         hueShift: 0
         saturation: 1
-        contrast: 1
+        contrast: 0.947
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}

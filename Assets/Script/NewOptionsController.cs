@@ -3,15 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.PostProcessing;
+
 
 public class NewOptionsController : MonoBehaviour {
 
 	public GameObject firstButton;
 
+	public PostProcessingProfile profile;
+
+	float _brillo =0;
+	public float brillo{
+		get{ 
+
+
+			return _brillo;
+		}
+		set{BrilloChange (value);}
+	}
+
     // Use this for initialization
     void OnEnable () {
 		FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (firstButton);
     }
+
+
+
+	public void BrilloChange( float valorBrillo)  {
+		ColorGradingModel.BasicSettings basicSettings = new ColorGradingModel.BasicSettings();
+		basicSettings.postExposure = valorBrillo;
+		basicSettings.saturation = 1;
+		basicSettings.contrast = 1;
+		ColorGradingModel.Settings settings = profile.colorGrading.settings;
+		settings.basic = basicSettings;
+		profile.colorGrading.settings =settings;
+	}
 
 	public void ChangeQuialityVeryLow () {
         QualitySettings.SetQualityLevel(0, true);

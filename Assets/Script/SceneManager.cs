@@ -21,7 +21,7 @@ public class SceneManager : MonoBehaviour {
 
     public void Play()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("IntroLevel1");
     }
 
     public void MainMenu()

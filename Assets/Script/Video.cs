@@ -11,6 +11,8 @@ public class Video : MonoBehaviour {
 
     public VideoClip videoToPlay;
 
+	public bool skipVideoAtKey;
+
     public string nextScene = "";
     private VideoPlayer videoPlayer;
     private VideoSource videoSource;
@@ -88,6 +90,8 @@ public class Video : MonoBehaviour {
         Debug.Log("Playing Video");
         while (videoPlayer.isPlaying)
         {
+			if (skipVideoAtKey && Input.anyKey)
+   				break;
             Debug.LogWarning("Video Time: " + Mathf.FloorToInt((float)videoPlayer.time));
             yield return null;
         }

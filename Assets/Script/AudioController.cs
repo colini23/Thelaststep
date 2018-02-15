@@ -7,7 +7,7 @@ public class AudioController : MonoBehaviour {
 	float minAttenuationFX = 0;
 	float minAttenuationMusic = 0;
 	const float maxAttenuation = -80f;
-	const string idEffectsVolume = "FXVolume";
+	const string idEffectsVolume = "FxVolume";
 	const string idMusicVolume = "MusicVolume";
 
 	[SerializeField]
@@ -30,16 +30,17 @@ public class AudioController : MonoBehaviour {
 			mixer.GetFloat(idEffectsVolume, out value);
 			return value;
 		}
-		set{ mixer.SetFloat (idEffectsVolume, Mathf.Clamp(value, maxAttenuation, minAttenuationFX));}
+		set{ mixer.SetFloat (idEffectsVolume, (40*value) - 40);}
 	}
 
 	public float musicVolume{
 		get{ 
+			
 			float value;
-			mixer.GetFloat(idMusicVolume, out value);
+			mixer.GetFloat(idMusicVolume, out (value));
 			return value;
 		}
-		set{ mixer.SetFloat (idMusicVolume, value);}
+		set{ mixer.SetFloat (idMusicVolume, (40*value) - 40);}
 	}
 
 	void Awake(){
@@ -62,12 +63,12 @@ public class AudioController : MonoBehaviour {
 	}
 
 	public void EnableEffects (bool enable){
-		effectsVolume = enable?minAttenuationFX:maxAttenuation;
+		effectsVolume = enable?1:0;
 
 	}
 
 	public void EnableMusic (bool enable){
-		musicVolume = enable?minAttenuationMusic:maxAttenuation;
+		musicVolume = enable?1:0;
 
 	}
 

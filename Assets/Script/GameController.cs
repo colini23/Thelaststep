@@ -17,7 +17,8 @@ public class GameController : MonoBehaviour {
     public Image card2Image;
 
     public Text fKey;
-	public GameObject pauseText;
+	public Animator panelPause;
+	public GameObject optionsPanel;
 	public RMF_RadialMenu radialMenu;
 	public Teleport teleport;
 	public Zoom zoom;
@@ -97,15 +98,22 @@ public class GameController : MonoBehaviour {
     }
 
 	public void SwitchPause (){
+		
 		paused = !paused;
 
 		Time.timeScale = paused ? 0 : 1;
 
-		pauseText.SetActive (paused);
-		Cursor.visible = paused;
+		//Fades del animator
+		panelPause.SetBool("Pause", paused);
 
+		if (!paused)			
+			optionsPanel.SetActive (false);
+
+		//Control de cursor visible/invisible
+		Cursor.visible = paused;
 		if (paused) {
 			Cursor.lockState = CursorLockMode.None;
+			//Mandamos el foco al primer botón del menú(por el mando)
 			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (focusButton);
 
 		} else {

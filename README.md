@@ -19,9 +19,9 @@ The game is a slow paced walking simulator with some obstacles and puzzles to so
 
 ### Contact info:
 
-Victor Bécar - victor.becar.cc@gmail.com
-Victor Lizaldre - victorlizal23@gmail.com
-Joel Bertran - joel.bertran@gmail.com
+Victor Bécar - victor.becar.cc@gmail.com   
+Victor Lizaldre - victorlizal23@gmail.com   
+Joel Bertran - joel.bertran@gmail.com   
 
 ### License:
 

@@ -44,6 +44,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					//forwards
 					//handled last as if strafing and moving forward at the same time forwards speed should take precedence
 					CurrentTargetSpeed = ForwardSpeed;
+
 				}
 #if !MOBILE_INPUT
 				if (Input.GetKey(RunKey) || Input.GetKey("joystick button 8"))
@@ -133,6 +134,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
+			if (gameObject.tag == "God") {
+				movementSettings.ForwardSpeed = 25;
+			} else {
+				movementSettings.ForwardSpeed = 8;
+
+			}
             RotateView();
 
 			if ((CrossPlatformInputManager.GetButtonDown("Jump") || Input.GetKey("joystick button 0")) && !m_Jump)
@@ -166,7 +173,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
 
                 desiredMove.x = desiredMove.x*movementSettings.CurrentTargetSpeed;
+					
                 desiredMove.z = desiredMove.z*movementSettings.CurrentTargetSpeed;
+
+
                 desiredMove.y = desiredMove.y*movementSettings.CurrentTargetSpeed;
                 if (m_RigidBody.velocity.sqrMagnitude <
                     (movementSettings.CurrentTargetSpeed*movementSettings.CurrentTargetSpeed))
@@ -237,6 +247,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     x = CrossPlatformInputManager.GetAxis("Horizontal"),
                     y = CrossPlatformInputManager.GetAxis("Vertical")
                 };
+
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }
@@ -257,6 +268,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 // Rotate the rigidbody velocity to match the new direction that the character is looking
                 Quaternion velRotation = Quaternion.AngleAxis(transform.eulerAngles.y - oldYRotation, Vector3.up);
                 m_RigidBody.velocity = velRotation*m_RigidBody.velocity;
+					
             }
         }
 
@@ -273,7 +285,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_IsGrounded = false;
+				if (gameObject.tag == "God") {
+					m_IsGrounded = true;
+				}
+				else
+                	m_IsGrounded = false;
                 m_GroundContactNormal = Vector3.up;
             }
             if (!m_PreviouslyGrounded && m_IsGrounded && m_Jumping)

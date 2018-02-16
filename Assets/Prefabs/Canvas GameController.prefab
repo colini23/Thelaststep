@@ -1346,7 +1346,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9e5d42a67dd3ba24180cdeba9f86606e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.772}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2238,6 +2238,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1454149363980710}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114303894768055226
@@ -2281,7 +2292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: MainMenu
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3908,6 +3919,7 @@ MonoBehaviour:
   card2Image: {fileID: 114549347080090034}
   fKey: {fileID: 114362542321897858}
   panelPause: {fileID: 95305541607703478}
+  optionsPanel: {fileID: 1109097192591248}
   radialMenu: {fileID: 114158139684508092}
   teleport: {fileID: 0}
   zoom: {fileID: 0}
@@ -4398,7 +4410,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1454149363980710}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -5465,6 +5477,7 @@ RectTransform:
   - {fileID: 224326614829996584}
   - {fileID: 224130635380997990}
   - {fileID: 224916531300781544}
+  - {fileID: 224959791647047186}
   m_Father: {fileID: 4564991182807832}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5996,7 +6009,6 @@ RectTransform:
   - {fileID: 224114911568290350}
   - {fileID: 224425942950918858}
   - {fileID: 224846186596355528}
-  - {fileID: 224959791647047186}
   m_Father: {fileID: 224549481245492798}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6081,8 +6093,8 @@ RectTransform:
   - {fileID: 224755071592107476}
   - {fileID: 224519918096649276}
   - {fileID: 224996865999203834}
-  m_Father: {fileID: 224916531300781544}
-  m_RootOrder: 4
+  m_Father: {fileID: 224549481245492798}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6135,7 +6147,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454149363980710}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

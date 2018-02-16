@@ -47,7 +47,7 @@ public class SceneManager : MonoBehaviour {
 
     void OnTriggerEnter(Collider player)
     {
-		if (player.tag == "Player")// || player.tag == "Untagged")
+		if (player.tag == "Player" || player.tag == "God")
         {
 			UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
         }

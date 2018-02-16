@@ -64,9 +64,12 @@ public class GameController : MonoBehaviour {
 		//God MOde
          if (Input.GetKeyDown(KeyCode.F10))
         {
-            player.GetComponent<Collider>().isTrigger = true;
-            Physics.gravity = Vector3.zero;
-            player.tag = "Untagged";
+			if (player.tag == "God") {
+				player.tag = "Player";
+			} else {
+				player.tag = "God";
+			}
+
         }
 
 		zoom.enabled = false;
@@ -117,6 +120,7 @@ public class GameController : MonoBehaviour {
 			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (focusButton);
 
 		} else {
+			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (null);
 			Cursor.lockState = CursorLockMode.Locked;
 		}
 

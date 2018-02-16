@@ -1,9 +1,8 @@
 ﻿/*   TAREAS PENDIENTES *
 
-- Color space??
--Teleport efecct
-Gamma corre
-- Click sound button. Testear
+- MOdo Dios.
+- Luces
+
 - Preguntas condicionadas.
 
 - main icon

@@ -25,5 +25,5 @@ Joel Bertran - joel.bertran@gmail.com
 
 ### License:
 
-Code License - 
-Assets License - 
+Code License -    
+Assets License -    

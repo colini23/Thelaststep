@@ -24,7 +24,8 @@ public class ActionArea : MonoBehaviour {
 		{
 			StartCoroutine ("RotateWheel");
 			keyCount--;
-			if (keyCount <= 0 && desactivateObject!= null)
+            
+            if (keyCount <= 0 && desactivateObject!= null)
 				desactivateObject.SetActive (false);
 		}
 	}
@@ -40,13 +41,13 @@ public class ActionArea : MonoBehaviour {
 
 	void OnTriggerEnter(Collider player)
 	{
-		GameController.controller.fKey.enabled = true;
+		GameController.controller.aKey.enabled = true;
 		inArea = true;
 	}
 
 	void OnTriggerExit(Collider player)
 	{
-		GameController.controller.fKey.enabled = false;
+		GameController.controller.aKey.enabled = false;
 		inArea = false;
 	}
 }

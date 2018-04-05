@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour {
     public Image card1Image;
     public Image card2Image;
 
-    public Text fKey;
-	public Animator panelPause;
+    public Text aKey;
+    public Animator panelPause;
 	public GameObject optionsPanel;
 	public RMF_RadialMenu radialMenu;
 	public Teleport teleport;
@@ -28,6 +28,11 @@ public class GameController : MonoBehaviour {
 	public GameObject focusButton;
 
     public GameStates gameState;
+    
+    ObjectAnalizer analizer;
+
+    [System.NonSerialized]
+    public int idObjAnalize = -1;
 
     public static GameController controller;
 
@@ -40,6 +45,7 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        analizer = FindObjectOfType<ObjectAnalizer>();
         gameState = GameStates.init;
 		Physics.gravity = new Vector3 (0,-10, 0);
 
@@ -55,8 +61,15 @@ public class GameController : MonoBehaviour {
 			}
 		}
 
-		//Pause
-		if (Input.GetKeyUp(KeyCode.Escape)|| Input.GetKeyDown("joystick button 7"))
+
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown("joystick button 3")) && idObjAnalize != -1)
+        {
+            analizer.ShowObject(idObjAnalize);
+            player.SetActive(false);
+        }
+
+            //Pause
+            if ((Input.GetKeyUp(KeyCode.Escape)|| Input.GetKeyDown("joystick button 7")) && analizer.active == false)
         {
 			SwitchPause ();
         }
@@ -118,6 +131,7 @@ public class GameController : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.None;
 			//Mandamos el foco al primer botón del menú(por el mando)
 			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (focusButton);
+            
 
 		} else {
 			FindObjectOfType<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (null);

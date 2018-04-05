@@ -15,7 +15,7 @@ public class Zoom : MonoBehaviour
 	// Use this for initialization
 	void LateUpdate()
 	{
-		if (Input.GetButtonDown("Fire2"))
+		if (Input.GetButtonDown("Fire2") || Input.GetMouseButtonDown(1))
 		{
 			isZoomed = !isZoomed;
 		}

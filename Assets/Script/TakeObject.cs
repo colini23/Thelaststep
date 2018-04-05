@@ -22,7 +22,7 @@ public class TakeObject : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown("joystick button 2"))
             {
                 Destroy(gameObject);
-                GameController.controller.fKey.enabled = false;
+                GameController.controller.aKey.enabled = false;
                 if (cardNumber == 1)
                     GameController.controller.gameState = GameStates.card1;
                 else
@@ -33,13 +33,13 @@ public class TakeObject : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        GameController.controller.fKey.enabled = true;
+        GameController.controller.aKey.enabled = true;
         toTake = true;
     }
 
     void OnTriggerExit(Collider player)
     {
-        GameController.controller.fKey.enabled = false;
+        GameController.controller.aKey.enabled = false;
         toTake = false;
     }
 }

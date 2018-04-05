@@ -78,4 +78,45 @@ public class AudioController : MonoBehaviour {
 		EnableMusic (true);
 	}
 
+
+    float musicVolumen = 0;
+
+    public void FadeInMusic()
+    {
+        StartCoroutine("FadeInMusicCorroutine");
+    }
+
+    IEnumerator FadeInMusicCorroutine()
+    {
+        float initial;
+        mixer.GetFloat(idMusicVolume, out initial);
+
+        for (float i = initial; i < 0; i++)
+        {
+            //musicVolumen 
+            mixer.SetFloat(idMusicVolume, i);
+            yield return null;
+        }
+             
+    }
+
+    public void FadeOutMusic()
+    {
+        StartCoroutine("FadeOutMusicCorroutine");
+    }
+
+    IEnumerator FadeOutMusicCorroutine()
+    {
+        float initial;
+        mixer.GetFloat(idMusicVolume, out initial);
+
+        for (float i = initial; i > -80; i--)
+        {
+            //musicVolumen 
+            mixer.SetFloat(idMusicVolume, i);
+            yield return null;
+        }
+
+    }
+
 }

@@ -37,7 +37,7 @@ public class Teleport : MonoBehaviour
 	{
 
 		//Confirmamos teleportación
-		if (Input.GetButtonUp("Fire2") && coldDownImage.fillAmount == 1){
+		if ((Input.GetButtonUp("Fire2") || Input.GetMouseButtonUp(1)) && coldDownImage.fillAmount == 1){
 			if (GetLookedAtObject () != null) {
 				StartCoroutine (TeleportToLookAt ());
 				coldDownImage.fillAmount = 0;
@@ -45,12 +45,12 @@ public class Teleport : MonoBehaviour
 			teleportMarker.SetActive (false);
 		}
 
-		if (Input.GetButtonDown("Fire2") && coldDownImage.fillAmount == 1) {
+		if ((Input.GetButtonDown("Fire2") || Input.GetMouseButtonDown(1)) && coldDownImage.fillAmount == 1) {
 			teleportMarker.SetActive (true);
 		}
 
 		//Mientras elegimos donde mostramos el sistema de partículas
-		if (Input.GetButton("Fire2") && coldDownImage.fillAmount == 1) {
+		if ((Input.GetButton("Fire2") || Input.GetMouseButton(1)) && coldDownImage.fillAmount == 1) {
 			GameObject currentTarget = GetLookedAtObject ();
 			if (currentTarget != null && currentTarget.tag == "Suelo")
 				teleportMarker.transform.position = lastRaycastHit.point + Vector3.up*0.01f;
